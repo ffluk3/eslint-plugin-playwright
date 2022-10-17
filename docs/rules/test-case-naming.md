@@ -63,23 +63,23 @@ Decides whether to use `test` or `it`.
 ```js
 // .eslintrc.js
 module.exports = {
-  "test-name-cases": [
-    "error",
-    {
-      matches: [
+    'test-name-cases': [
+        'error',
         {
-          match: "flaky",
-          requirement: "reason:",
-          violation: "provide a reason for the failing test",
+            matches: [
+                {
+                    match: 'flaky',
+                    requirement: 'reason:',
+                    violation: 'provide a reason for the failing test',
+                },
+            ],
         },
-      ],
-    },
-  ],
-};
+    ],
+}
 
 // valid
-it("@flaky reason:Need to update this test - run things");
+it('@flaky reason:Need to update this test - run things')
 
 // invalid
-it("@flaky run things");
+it('@flaky run things')
 ```

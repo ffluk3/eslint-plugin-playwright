@@ -1,18 +1,18 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "outDir": "dist",
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "types": ["jest"]
-  },
-  "include": ["./**/*.ts"],
-  "exclude": ["node_modules"]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "types": ["jest"]
+    },
+    "include": ["./**/*.ts"],
+    "exclude": ["node_modules"]
 }
