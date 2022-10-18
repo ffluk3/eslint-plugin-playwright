@@ -3,6 +3,7 @@
  */
 
 import { ESLintUtils } from '@typescript-eslint/utils'
+import { isTest } from '../utils/ast'
 
 interface TestNameMatch {
     match: string
@@ -75,10 +76,7 @@ export const ruleTestCaseNaming = createRule({
                     return
                 }
 
-                const calleeName = (node.parent.callee as any).name
-
-                // If this literal wasn't called with the function type, return
-                if (calleeName !== 'test') {
+                if (!isTest(node.parent)) {
                     return
                 }
 

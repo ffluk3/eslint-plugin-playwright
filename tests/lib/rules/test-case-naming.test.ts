@@ -13,7 +13,7 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
             import { test } from '@playwright/test';
 
             test.describe("hello world", async () => {
-                test("@flaky nothing else here")
+                test("@flaky nothing else here", async () => {})
             })
             `,
             options: [

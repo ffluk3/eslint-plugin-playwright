@@ -3,6 +3,7 @@
         "baseUrl": ".",
         "module": "commonjs",
         "moduleResolution": "node",
+        "lib": ["ES2017", "dom"],
         "outDir": "dist",
         "noImplicitAny": true,
         "noUnusedLocals": true,
