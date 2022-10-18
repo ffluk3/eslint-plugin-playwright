@@ -1,7 +1,7 @@
 {
     "name": "@ffluk3/eslint-plugin-playwright",
     "description": "Rules for playwright",
-    "repository": "https://github.com/@ffluk3/eslint-plugin-playwright",
+    "repository": "git@github.com:@ffluk3/eslint-plugin-playwright",
     "author": "Lucas Shadler",
     "license": "MIT",
     "main": "dist/index.js",
