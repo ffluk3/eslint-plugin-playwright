@@ -1,6 +1,7 @@
 # Additional custom rules for Playwright
 
-[![Release](https://github.com/ffluk3/eslint-plugin-playwright/actions/workflows/release.yml/publish.svg)](https://github.com/ffluk3/eslint-plugin-playwright/actions/workflows/release.yml/publish.svg)
+[![CI](https://github.com/ffluk3/eslint-plugin-playwright/actions/workflows/ci.yml/badge.svg)](https://github.com/ffluk3/eslint-plugin-playwright/actions/workflows/ci.yml/badge.svg)
+[![CD](https://github.com/ffluk3/eslint-plugin-playwright/actions/workflows/publish.yml/badge.svg)](https://github.com/ffluk3/eslint-plugin-playwright/actions/workflows/publish.yml/badge.svg)
 [![NPM](https://img.shields.io/npm/v/@ffluk3/eslint-plugin-playwright)](https://www.npmjs.com/package/@ffluk3/eslint-plugin-playwright)
 
 > ESLint plugin that extends [Playwright](https://github.com/microsoft/playwright)
