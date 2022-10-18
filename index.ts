@@ -4,7 +4,7 @@
 
 import { ruleTestCaseNaming } from './lib/rules/test-case-naming'
 
-export default {
+export = {
     rules: {
         'test-case-naming': ruleTestCaseNaming,
     },

@@ -71,30 +71,42 @@ export const ruleTestCaseNaming = createRule({
 
         return {
             Literal(node) {
+                // if literal is undefined or empty, return
+                if(!node.value) {
+                    return;
+                }
+
+                // If this literal wasn't a parameter of a function, return
+                if (node.parent.type !== 'CallExpression') {
+                    return
+                } 
+                            
+                const calleeName = (node.parent.callee as any).name
+
+                // If this literal wasn't called with the function type, return
+                if(calleeName !== options.fn) {
+                    return;
+                }
+
                 options.matches.forEach((matchRule: TestNameMatch) => {
                     if (
                         new RegExp(matchRule.match).test(node.value.toString())
                     ) {
-                        const testName = node.value.toString()
+                        const testName = node?.value.toString()
 
-                        if (node.parent.type === 'CallExpression') {
-                            const calleeName = (node.parent.callee as any).name
-
-                            if (calleeName === options.fn) {
-                                const meetsRequirement = new RegExp(
-                                    matchRule.requirement
-                                ).test(testName)
-                                if (!meetsRequirement) {
-                                    context.report({
-                                        node,
-                                        messageId: 'doesNotMeetRequirement',
-                                        data: {
-                                            violation: matchRule.violation,
-                                        },
-                                    })
-                                }
-                            }
+                        const meetsRequirement = new RegExp(
+                            matchRule.requirement
+                        ).test(testName)
+                        if (!meetsRequirement) {
+                            context.report({
+                                node,
+                                messageId: 'doesNotMeetRequirement',
+                                data: {
+                                    violation: matchRule.violation,
+                                },
+                            })
                         }
+
                     }
                 })
             },
