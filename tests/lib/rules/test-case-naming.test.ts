@@ -25,8 +25,7 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                             violation:
                                 'Expected flaky test to have hello world in name',
                         },
-                    ],
-                    fn: 'test',
+                    ]
                 },
             ],
             errors: [
@@ -39,35 +38,7 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                 },
             ],
         },
-        {
-            code: stripIndent`
-            describe("hello world", async () => {
-                it("@flaky nothing else here")
-            })
-            `,
-            options: [
-                {
-                    matches: [
-                        {
-                            match: '@flaky',
-                            requirement: 'hello world',
-                            violation:
-                                'Expected flaky test to have hello world in name',
-                        },
-                    ],
-                    fn: 'it',
-                },
-            ],
-            errors: [
-                {
-                    messageId: 'doesNotMeetRequirement',
-                    data: {
-                        violation:
-                            'Expected flaky test to have hello world in name',
-                    },
-                },
-            ],
-        },
+
     ],
     valid: [
         {
@@ -88,7 +59,6 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                                 'Expected flaky test to have hello world in name',
                         },
                     ],
-                    fn: 'test',
                 },
             ],
         },
@@ -108,9 +78,27 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                                 'Expected flaky test to have hello world in name',
                         },
                     ],
-                    fn: 'it',
                 },
             ],
+        },
+                {
+            code: stripIndent`
+            describe("hello world", async () => {
+                it("@flaky nothing else here")
+            })
+            `,
+            options: [
+                {
+                    matches: [
+                        {
+                            match: '@flaky',
+                            requirement: 'hello world',
+                            violation:
+                                'Expected flaky test to have hello world in name',
+                        },
+                    ],
+                },
+            ]
         },
     ],
 })

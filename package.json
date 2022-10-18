@@ -3,16 +3,16 @@
     "description": "Rules for playwright",
     "main": "dist/index.js",
     "keywords": [
-      "eslint",
-      "plugin",
-      "playwright"
+        "eslint",
+        "plugin",
+        "playwright"
     ],
     "files": [
-      "dist",
-      "docs"
+        "dist",
+        "docs"
     ],
     "publishConfig": {
-      "access": "public"
+        "access": "public"
     },
     "version": "0.0.1",
     "devDependencies": {
@@ -30,6 +30,7 @@
         "eslint-plugin-eslint-plugin": "5.0.6",
         "eslint-plugin-jest": "27.1.2",
         "eslint-plugin-node": "11.1.0",
+        "husky": "8.0.1",
         "jest": "29.2.0",
         "prettier": "2.7.1",
         "semantic-release": "19.0.5",
