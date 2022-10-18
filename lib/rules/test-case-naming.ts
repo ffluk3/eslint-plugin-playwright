@@ -30,7 +30,7 @@ export const ruleTestCaseNaming = createRule({
             recommended: 'error',
         },
         messages: {
-            doesNotMeetRequirement: 'Does not meet specified requirement',
+            doesNotMeetRequirement: 'Requirement not met: {{ violation }}',
         },
         schema: [
             {
