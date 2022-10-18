@@ -6,7 +6,6 @@
       "dist",
       "docs"
     ],
-    "private": "false",
     "publishConfig": {
       "access": "public"
     },
