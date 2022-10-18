@@ -30,10 +30,7 @@ This rule can be configured as follows
           },
         },
       },
-    },
-    fn: {
-      enum: ["test", "it"],
-    },
+    }
   },
 },
 ```
@@ -51,10 +48,6 @@ For each found test case name, provide a `RegExp` string that validates that a g
 #### violation
 
 Message to display when violation is met
-
-### fn
-
-Decides whether to use `test` or `it`.
 
 ## Examples
 

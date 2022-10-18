@@ -1,7 +1,12 @@
 {
-    "name": "@ffluk3/eslint-plugin-test-names",
-    "description": "Rules for our playwright instance",
+    "name": "@ffluk3/eslint-plugin-playwright",
+    "description": "Rules for playwright",
     "main": "dist/index.js",
+    "keywords": [
+      "eslint",
+      "plugin",
+      "playwright"
+    ],
     "files": [
       "dist",
       "docs"

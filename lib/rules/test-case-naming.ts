@@ -8,8 +8,6 @@ interface TestNameMatch {
     match: string
     requirement: string
     violation: string
-    // TODO: allow explicit import module for TDD/BDD versbs
-    // importName: "@playwright/test"
 }
 
 const createRule = ESLintUtils.RuleCreator(
@@ -21,7 +19,6 @@ export const ruleTestCaseNaming = createRule({
     defaultOptions: [
         {
             matches: [],
-            fn: 'tdd',
         },
     ],
     meta: {
@@ -53,9 +50,6 @@ export const ruleTestCaseNaming = createRule({
                             },
                         },
                     },
-                    fn: {
-                        enum: ['it', 'test'],
-                    },
                 },
             },
         ],
@@ -84,7 +78,7 @@ export const ruleTestCaseNaming = createRule({
                 const calleeName = (node.parent.callee as any).name
 
                 // If this literal wasn't called with the function type, return
-                if(calleeName !== options.fn) {
+                if(calleeName !== 'test') {
                     return;
                 }
 
