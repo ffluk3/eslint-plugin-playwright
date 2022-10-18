@@ -66,20 +66,20 @@ export const ruleTestCaseNaming = createRule({
         return {
             Literal(node) {
                 // if literal is undefined or empty, return
-                if(!node.value) {
-                    return;
+                if (!node.value) {
+                    return
                 }
 
                 // If this literal wasn't a parameter of a function, return
                 if (node.parent.type !== 'CallExpression') {
                     return
-                } 
-                            
+                }
+
                 const calleeName = (node.parent.callee as any).name
 
                 // If this literal wasn't called with the function type, return
-                if(calleeName !== 'test') {
-                    return;
+                if (calleeName !== 'test') {
+                    return
                 }
 
                 options.matches.forEach((matchRule: TestNameMatch) => {
@@ -100,7 +100,6 @@ export const ruleTestCaseNaming = createRule({
                                 },
                             })
                         }
-
                     }
                 })
             },

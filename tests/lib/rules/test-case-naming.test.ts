@@ -25,7 +25,7 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                             violation:
                                 'Expected flaky test to have hello world in name',
                         },
-                    ]
+                    ],
                 },
             ],
             errors: [
@@ -38,7 +38,6 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                 },
             ],
         },
-
     ],
     valid: [
         {
@@ -81,7 +80,7 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                 },
             ],
         },
-                {
+        {
             code: stripIndent`
             describe("hello world", async () => {
                 it("@flaky nothing else here")
@@ -98,7 +97,7 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                         },
                     ],
                 },
-            ]
+            ],
         },
     ],
 })
