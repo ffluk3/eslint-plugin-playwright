@@ -22,7 +22,7 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                         {
                             match: '@flaky',
                             requirement: 'hello world',
-                            message:
+                            violation:
                                 'Expected flaky test to have hello world in name',
                         },
                     ],
@@ -51,7 +51,7 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                         {
                             match: '@flaky',
                             requirement: 'hello world',
-                            message:
+                            violation:
                                 'Expected flaky test to have hello world in name',
                         },
                     ],
@@ -84,7 +84,7 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                         {
                             match: '@flaky',
                             requirement: 'hello world',
-                            message:
+                            violation:
                                 'Expected flaky test to have hello world in name',
                         },
                     ],
@@ -104,7 +104,7 @@ ruleTester.run('test-name-cases', ruleTestCaseNaming, {
                         {
                             match: '@flaky',
                             requirement: 'hello world',
-                            message:
+                            violation:
                                 'Expected flaky test to have hello world in name',
                         },
                     ],
